@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css"/>
+  <title>Contactez-nous - NexGoal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f4f6f8, #d7e0ea);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .cont {
+      margin: 50px auto;
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .cont h2 {
+      margin-bottom: 20px;
+      color: #004aad;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #004aad;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contactez-nous</h1>
+  </header>
+
+  <main class="cont">
+    <h2>Une question, un retour ou un bug à signaler ?</h2>
+    <p>Remplis ce formulaire et nous te répondrons dès que possible.</p>
+
+    <form>
+      <label>Nom</label>
+      <input type="text" placeholder="Votre nom" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Votre adresse email" required>
+
+      <label>Message</label>
+      <textarea placeholder="Écris ton message ici..." required></textarea>
+
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+    <section style="margin-top: 40px;">
+    <h3 style="color: #004aad; font-size: 22px;">Me contacter</h3>
+    <p>📧 Email : <a href="mailto:harmohlb01@gmail.com">harmohlb01@gmail.com</a></p>
+    <p>📱 Téléphone / WhatsApp : <a href="tel:+2290164011746">+229 0164011746</a></p>
+    <p>🔗 LinkedIn : <a href="https://www.linkedin.com/in/harmonic-hounleba-7babba33b" target="_blank">Harmonic HOUNLEBA</a></p>
+    <p>💻 GitHub : <a href="https://github.com/harmo912" target="_blank">@harmo912</a></p>
+    <p>📸 Instagram : <a href="https://www.instagram.com/harmonic_hounleba?igsh=MW5hYnEwOHd3MmljeQ==" target="_blank">@harmonic_hounleba</a></p>
+    </section>
+  </main>
+
+  <footer>
+  <canvas id="footer-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+  <div class="footer-content" style="position: relative; z-index: 1;">
+  <h3>NexGoal &copy; 2025</h3>
+  <p>Votre compagnon intelligent pour atteindre vos objectifs personnels et professionnels.</p>
+  <p>Créé avec passion par <strong>Harmo912</strong> — <a href="#">Voir le projet</a></p>
+  </div>
+  </footer>
+  
+  <script src="footer.js"></script>
+  <script>
+  function toggleMenu() {
+  const nav = document.getElementById("nav");
+  if (nav.style.display === "flex") {
+  nav.style.display = "none";
+  } else {
+  nav.style.display = "flex";
+  nav.style.flexDirection = "column";
+  }
+  }
+  </script>
+<script src="footer.js"></script>
+</body>
+</html>

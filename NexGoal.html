@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>NexGoal - Suivi d'Objectifs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f4f6f8, #d7e0ea);
+      color: #333;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: block;
+    }
+
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #003e91;
+      display: none;
+      flex-direction: column;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      border-top: 1px solid #0051cc;
+    }
+
+    nav a:hover {
+      background: #0055ff;
+    }
+
+    .cont {
+      margin: 50px auto;
+      width: 90%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .cont h2 {
+      margin-bottom: 10px;
+      color: #004aad;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #004aad;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s ease;
+    }
+
+    .btn:hover {
+      background-color: #0055ff;
+      box-shadow: 0 0 10px #004aad, 0 0 30px #007bff;
+    }
+
+    footer {
+      background-color: #002b5c;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 600px) {
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+        background: transparent;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">NexGoal</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="#">Accueil</a>
+      <a href="#">Objectifs</a>
+      <a href="#">Statistiques</a>
+      <a href="#">À propos</a>
+    </nav>
+  </header>
+
+  <div class="cont">
+    <h2>Bienvenue sur NexGoal</h2>
+    <p>Inscrivez-vous pour suivre vos objectifs avec clarté et motivation.</p>
+
+    <label>Pseudo</label>
+    <input type="text" name="pseudo" placeholder="Votre pseudo">
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Votre email">
+
+    <label>Mot de passe</label>
+    <input type="password" name="pass" placeholder="Mot de passe">
+
+    <button class="btn">S'inscrire</button>
+  </div>
+
+  <footer>
+    <h3>NexGoal &copy; 2025</h3>
+    <p>Votre compagnon intelligent pour atteindre vos objectifs personnels et professionnels.</p>
+    <p>Créé avec passion par <strong>Harmo912</strong> — <a href="#">Voir le projet</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      if (nav.style.display === "flex") {
+        nav.style.display = "none";
+      } else {
+        nav.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+</html>

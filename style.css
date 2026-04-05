@@ -1,0 +1,199 @@
+
+    /* Reset & Base */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f4f6f8, #d7e0ea);
+    color: #333;
+    }
+    
+    /* Structure */
+    main {
+    flex: 1;
+    }
+    
+    /* Header */
+    header {
+    background-color: #004aad;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    }
+    
+    .logo {
+    font-size: 24px;
+    font-weight: bold;
+    }
+    
+    .menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    }
+    
+    /* Navigation */
+    nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #003e91;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: max-height 0.4s ease;
+    }
+    
+    nav.active {
+    max-height: 500px; /* Ajuster si besoin */
+    display: flex !important;
+    }
+    
+    nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-top: 1px solid #0051cc;
+    }
+    
+    nav a:hover {
+    background: #0055ff;
+    }
+    
+    @media (min-width: 600px) {
+    nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    background: transparent;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+    }
+    
+    .menu-toggle {
+    display: none;
+    }
+    }
+    
+    /* Formulaire */
+    .cont {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    
+    .cont h2 {
+    margin-bottom: 10px;
+    color: #004aad;
+    }
+    
+    label {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    }
+    
+    input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    }
+    
+    textarea {
+    resize: vertical;
+    min-height: 120px;
+    }
+    
+    /* Bouton */
+    .btn {
+    margin-top: 20px;
+    background-color: #004aad;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    }
+    
+    .btn:hover {
+    background-color: #0055ff;
+    box-shadow: 0 0 10px #004aad, 0 0 30px #007bff;
+    }
+    
+    /* Footer animé */
+    footer {
+    position: relative;
+    background-color: #002b5c;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    }
+    
+    #footer-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+    
+    .footer-content {
+    position: relative;
+    z-index: 2;
+    }
+    
+    footer h3 {
+    margin-bottom: 15px;
+    }
+    
+    footer p {
+    opacity: 0.85;
+    font-size: 14px;
+    }
+    
+    footer a {
+    color: #58a6ff;
+    text-decoration: none;
+    }
+    
+    footer a:hover {
+    text-decoration: underline;
+    }
+    
+    .nex {
+    color: yellow;
+    font-weight: bold;
+    }
+    
